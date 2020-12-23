@@ -1,4 +1,4 @@
- ![OSIlogo.png](./images/OSIlogo.png)
+ ![OSIlogo.png](./src/images/OSIlogo.png)
 
  # OSIsoft PI System on Azure
 The PI System Deployment Sample for Azure are automated deployments that deploy the PI System on Microsoft Azure through Azure Resource Manager (ARM) templates and PowerShell Desired State Configuration (DSC) scripts. 
@@ -20,11 +20,11 @@ The PI System Deployment Sample for Azure installs core PI System components suc
 
 The deployment sample scripts create a virtual network divided into private and public subnets, the access to which is governed by associated Network Security Groups (NSGs). The deployment samples deploy all of the resources that comprise the PI System instance into these two subgroups, as shown in the following figures.
 
-| ![AzurenonHADiagram.png](./images/AzurenonHADiagram.png)  |
+| ![AzurenonHADiagram.png](./src/images/AzurenonHADiagram.png)  |
 |:--:|
 | *A Non-HA PI System Deployment on Azure* |
 
-| ![AzureHADiagram.png](./images/AzureHADiagram.png)  |
+| ![AzureHADiagram.png](./src/images/AzureHADiagram.png)  |
 |:--:|
 | *An HA PI System Deployment on Azure* |
 
