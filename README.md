@@ -4,7 +4,7 @@
 The PI System Deployment Sample for Azure are automated deployments that deploy the PI System on Microsoft Azure through Azure Resource Manager (ARM) templates and PowerShell Desired State Configuration (DSC) scripts. 
 
 ## Overview
-This readme guide details a sample architecture for a PI System Deployment for Azure, how machines are interconnected and what software is installed. In addition, there are step-by-step instructions for deploying the PI System instance into an Azure subscription using the deployment samples. The deployment samples are available on the [OSIsoft GitHub repository for Azure](https://github.com/osisoft/OSI-Samples-PI-System/tree/master/PI-System-Deployment-Samples/Azure).
+This readme guide details a sample architecture for a PI System Deployment for Azure, how machines are interconnected and what software is installed. In addition, there are step-by-step instructions for deploying the PI System instance into an Azure subscription using the deployment samples.
 
 These deployment samples are intended for use by existing OSIsoft customers for the purpose of facilitating fast iterative testing and prototyping of a PI System deployment. As development environments move to the cloud, PI Admins need easy and quick ways to deploy resources for their testing cycles. The deployment samples provide an easy way to deploy a full PI System repeatedly and reliably for this type of development cycle. 
 >**Note:** These deployment samples are not meant to be used within a production environment but rather for testing and prototyping purposes.  
@@ -57,7 +57,7 @@ There are a number of prerequisites that need to be met prior to launching the d
 Create a Microsoft Azure account if you do not already have one by visiting the [Create your Azure free account today page](https://azure.microsoft.com/en-us/free/) and following the instructions. Check that you can log into the [Azure portal](https://portal.azure.com) using your newly created account.
 
 #### Download the Deployment Samples Files
-The PI System Deployment Sample for Azure repository located on [OSIsoft GitHub repository for Azure](https://github.com/osisoft/OSI-Samples-PI-System/tree/master/PI-System-Deployment-Samples/Azure) contain templates, scripts and  files necessary to deploy the PI System and necessary Azure infrastructure. 
+The PI System Deployment Sample for Azure repository located on [OSIsoft GitHub repository for Azure](https://github.com/osisoft/sample-pi_core-deployment_azure-powershell) contain templates, scripts and  files necessary to deploy the PI System and necessary Azure infrastructure. 
 
 Download and extract the deployment sample files:
 1. Go to the [OSIsoft GitHub repository for PI System Deployment Samples](https://github.com/osisoft/OSI-Samples-PI-System).
@@ -200,13 +200,13 @@ Once the PI Data Archive(s) are fully deployed, you can generate a full PI licen
 
 #### Generate a Full PI license:
 1. Log into the primary PI Data Archive server machine.     
-> **Note:** Create the Machine Signature File (MSF) on the server that is the primary member of the pair of PI Data Archive servers deployed. For more information on HA and collective members, see the *License a new PI Data Archive collective* section of the *PI Server Installation and Upgrade Guide*. You can find this guide on the OSIsoft [Customer Portal](https:\\my.osisoft.com).
+> **Note:** Create the Machine Signature File (MSF) on the server that is the primary member of the pair of PI Data Archive servers deployed. For more information on HA and collective members, see the *License a new PI Data Archive collective* section of the *PI Server Installation and Upgrade Guide*. You can find this guide on the OSIsoft Customer Portal.
 2. Create an MSF using the pidiag utility on the PI Data Archive server machine. This utility is installed as part of your PI System deployment on the machine that hosts the PI Data Archive.
 3. Copy the ds-admin password contained in the secret value from the Azure key vault.
 4. Log into RDS machine using the copied password from the key vault.
 5. Remote login to the PI Data Archive machine(s) from the RDS node using the same copied credentials.
 6. Find and copy the MSF on the PI Data Archive machine(s) onto the RDS machine.
-7. Generate the license file on the OSIsoft [Customer Portal](my.osisoft.com). For instructions on do this, see the *PI Server Installation and Upgrade Guide*, in the section [Generate a license file for a standalone deployment](https://livelibrary.osisoft.com/LiveLibrary/content/en/server-v12/GUID-0AE01ADF-771E-4BDA-B266-3C928BF79EBC). 
+7. Generate the license file on the OSIsoft Customer Portal. For instructions on do this, see the *PI Server Installation and Upgrade Guide*, in the section [Generate a license file for a standalone deployment](https://livelibrary.osisoft.com/LiveLibrary/content/en/server-v12/GUID-0AE01ADF-771E-4BDA-B266-3C928BF79EBC). 
 
 #### Replace the temporary license with the full PI license
 1. Browse to the newly generated PI license in File Explorer and copy the license file.
