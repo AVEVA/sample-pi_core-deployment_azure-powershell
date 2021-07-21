@@ -113,7 +113,6 @@ Unzipped folder (AzureDeployment)
     |--> PI-Server_2018-SP3-Patch-3_.exe 
     |--> PI-Vision_2020_.exe
     |--> pilicense.dat 
-    |--> UpdateAFServersUser.sql 
     |--> PI-System-Deployment-Tests.zip 
 |--> LocalNugetPackages 
     |--> PSDSSupportPIDA.0.0.0.3.nupkg 
