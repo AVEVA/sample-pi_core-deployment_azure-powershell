@@ -150,6 +150,7 @@ Launching the PI System Deployment Sample for Azure will deploy a full PI System
 7. When the **Microsoft Azure** sign-in screen appears, sign in with your Azure account that contains the desired subscription.
 >**Note:** This sign-in screen may appear behind already open windows. Make sure to minimize all windows if you do not see this prompt!
 8. Wait for the deployment process to complete. You can monitor the progress of the deployment by logging in to [Azure portal](https://portal.azure.com) and selecting the **Resource group** you provided and clicking **Deployments**. The status of all the deployments should be **Succeeded** and the PowerShell prompt on your local machine should have finished without any errors.
+9. Set ExecutionPolicy back to what it was before. Enter the following command: `PS C:\WINDWOWS\system32> Set-ExecutionPolicy Default` and press **Enter**.
 
 ##### Script Parameters
  Parameter | Default | Description | Example
