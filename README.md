@@ -62,7 +62,7 @@ The PI System Deployment Sample for Azure repository located on [OSIsoft GitHub 
 Download and extract the deployment sample files:
 1. Go to the [OSIsoft GitHub repository for PI System Deployment Samples](https://github.com/osisoft/OSI-Samples-PI-System).
 2. Click **Clone or Download** and then **Download Zip** to download the contents of this GitHub repository, and select the target location on your local machine.
-3. Extract the **PI-System-Deployment-Samples** folder to your local machine.
+3. Extract the **PI-System-Deployment-Samples** folder to your local machine in a path without spaces.
 4. After extracting the repository to a local folder, navigate to <extraction folder>\OSI-Samples-PI-System-master\PI-System-Deployment-Samples\Azure.
 
 #### Download NuGet.exe
