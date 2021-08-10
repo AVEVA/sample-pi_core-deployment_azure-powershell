@@ -1,6 +1,9 @@
  ![OSIlogo.png](./images/OSIlogo.png)
 
  # OSIsoft PI System on Azure
+
+**Version:** 1.0.1
+
 The PI System Deployment Sample for Azure are automated deployments that deploy the PI System on Microsoft Azure through Azure Resource Manager (ARM) templates and PowerShell Desired State Configuration (DSC) scripts. 
 
 ## Overview
