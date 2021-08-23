@@ -60,10 +60,8 @@ Create a Microsoft Azure account if you do not already have one by visiting the 
 The PI System Deployment Sample for Azure repository located on [OSIsoft GitHub repository for Azure](https://github.com/osisoft/sample-pi_core-deployment_azure-powershell) contain templates, scripts and  files necessary to deploy the PI System and necessary Azure infrastructure. 
 
 Download and extract the deployment sample files:
-1. Go to the [OSIsoft GitHub repository for PI System Deployment Samples](https://github.com/osisoft/OSI-Samples-PI-System).
-2. Click **Clone or Download** and then **Download Zip** to download the contents of this GitHub repository, and select the target location on your local machine.
-3. Extract the **PI-System-Deployment-Samples** folder to your local machine.
-4. After extracting the repository to a local folder, navigate to <extraction folder>\OSI-Samples-PI-System-master\PI-System-Deployment-Samples\Azure.
+1. Click **Clone or Download** and then **Download Zip** to download the contents of this GitHub repository, and select the target location on your local machine.
+2. Extract the **sample-pi_core-deployment_azure-powershell** folder to your local machine.
 
 #### Download NuGet.exe
 Download the `NuGet.exe` file in order to deploy a PI System instance on Azure. Browse to the [NuGet download page](https://www.nuget.org/downloads) and copy `nuget.exe` to the root of the Azure folder located in your extracted directory.
@@ -97,10 +95,9 @@ Download the following PI System files to the **LocalArtifacts** folder on your 
 6. Upload your PI Vision installer into the **LocalArtifacts** folder on your local machine.
 
 ##### Download and Stage the PI System Deployment Tests File
-1. Go to the [OSIsoft GitHub repository for PI System Deployment Samples](https://github.com/osisoft/OSI-Samples-PI-System).
-2. Click **Clone or Download** and then **Download Zip** to download the contents of this GitHub repository onto your local machine as a zip file. The deployment samples will configure and run the deployment tests for your environment.
-3. Extract the **PI-System-Deployment-Tests** folder to your local machine.
-4. Locate the folder called "PI-System-Deployment-Tests", right click on it and select "Send to > Compressed (zipped) folder". The filename should be PI-System-Deployment-Tests.zip.
+1. Click **Clone or Download** and then **Download Zip** to download the contents of this GitHub repository onto your local machine as a zip file. The deployment samples will configure and run the deployment tests for your environment.
+3. Extract the **sample-pi_core-deployment_azure-powershell** folder to your local machine.
+4. Locate the folder called "sample-pi_core-deployment_azure-powershell", right click on it and select "Send to > Compressed (zipped) folder". The filename should be sample-pi_core-deployment_azure-powershell.zip.
 5. Save this zip file onto your local machine in the **LocalArtifacts** folder. 
 
 #### Verify You Have All of the Necessary Files
