@@ -95,9 +95,10 @@ Download the following PI System files to the **LocalArtifacts** folder on your 
 6. Upload your PI Vision installer into the **LocalArtifacts** folder on your local machine.
 
 ##### Download and Stage the PI System Deployment Tests File
+1. Go to the [OSIsoft Repository for PI System Deployment Tests](https://github.com/osisoft/sample-pi_core-pi_core_deployment_tests-powershell).
 1. Click **Clone or Download** and then **Download Zip** to download the contents of this GitHub repository onto your local machine as a zip file. The deployment samples will configure and run the deployment tests for your environment.
-3. Extract the **sample-pi_core-deployment_azure-powershell** folder to your local machine.
-4. Locate the folder called "sample-pi_core-deployment_azure-powershell", right click on it and select "Send to > Compressed (zipped) folder". The filename should be sample-pi_core-deployment_azure-powershell.zip.
+3. Extract the **sample-pi_core-pi_core_deployment_tests-powershell** folder to your local machine.
+4. Locate the folder called "sample-pi_core-pi_core_deployment_tests-powershell", right click on it and select "Send to > Compressed (zipped) folder". The filename should be sample-pi_core-pi_core_deployment_tests-powershell.zip.
 5. Save this zip file onto your local machine in the **LocalArtifacts** folder. 
 
 #### Verify You Have All of the Necessary Files
