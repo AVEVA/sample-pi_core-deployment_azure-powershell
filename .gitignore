@@ -3,8 +3,7 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-LocalArtifacts/*
-!LocalArtifacts/UpdateAFServersUser.sql
+LocalArtifacts/
 # User-specific files
 *.suo
 *.user
@@ -181,8 +180,6 @@ PublishScripts/
 
 # NuGet Packages
 *.nupkg
-!PSDSSupportPIDA*.nupkg
-!PSDSSupportPIVS*.nupkg
 # The packages folder can be ignored because of Package Restore
 **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
