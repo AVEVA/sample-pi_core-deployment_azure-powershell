@@ -1,10 +1,10 @@
  ![OSIlogo.png](./images/OSIlogo.png)
 
- # OSIsoft PI System on Azure
+ # PI System on Azure
 The PI System Deployment Sample for Azure are automated deployments that deploy the PI System on Microsoft Azure through Azure Resource Manager (ARM) templates and PowerShell Desired State Configuration (DSC) scripts. 
 
 ## Overview
-This readme guide details a sample architecture for a PI System Deployment for Azure, how machines are interconnected and what software is installed. In addition, there are step-by-step instructions for deploying the PI System instance into an Azure subscription using the deployment samples.
+This readme guide details a sample architecture for a PI System Deployment for Azure, how machines are interconnected and what software is installed. In addition, there are step-by-step instructions for deploying the PI System instance into an Azure subscription using the deployment samples. The deployment samples are available on the [OSIsoft GitHub repository for Azure](https://github.com/osisoft/sample-pi_core-deployment_azure-powershell).
 
 These deployment samples are intended for use by existing OSIsoft customers for the purpose of facilitating fast iterative testing and prototyping of a PI System deployment. As development environments move to the cloud, PI Admins need easy and quick ways to deploy resources for their testing cycles. The deployment samples provide an easy way to deploy a full PI System repeatedly and reliably for this type of development cycle. 
 >**Note:** These deployment samples are not meant to be used within a production environment but rather for testing and prototyping purposes.  
@@ -60,8 +60,10 @@ Create a Microsoft Azure account if you do not already have one by visiting the 
 The PI System Deployment Sample for Azure repository located on [OSIsoft GitHub repository for Azure](https://github.com/osisoft/sample-pi_core-deployment_azure-powershell) contain templates, scripts and  files necessary to deploy the PI System and necessary Azure infrastructure. 
 
 Download and extract the deployment sample files:
-1. Click **Clone or Download** and then **Download Zip** to download the contents of this GitHub repository, and select the target location on your local machine.
-2. Extract the **sample-pi_core-deployment_azure-powershell** folder to your local machine.
+1. Go to the [OSIsoft GitHub repository for PI System Deployment Samples](https://github.com/osisoft/OSI-Samples-PI-System).
+2. Click **Clone or Download** and then **Download Zip** to download the contents of this GitHub repository, and select the target location on your local machine.
+3. Extract the **PI-System-Deployment-Samples** folder to your local machine.
+4. After extracting the repository to a local folder, navigate to <extraction folder>\OSI-Samples-PI-System-master\PI-System-Deployment-Samples\Azure.
 
 #### Download NuGet.exe
 Download the `NuGet.exe` file in order to deploy a PI System instance on Azure. Browse to the [NuGet download page](https://www.nuget.org/downloads) and copy `nuget.exe` to the root of the Azure folder located in your extracted directory.
@@ -75,31 +77,30 @@ Download the following PI System files to the **LocalArtifacts** folder on your 
 
 >**Note:** The deployment sample will use the temporary PI license to deploy. After the deployment of the PI Data Archive(s), you will be able to generate a full PI license file through the OSIsoft Customer Portal using the Machine Signature File created from your deployed PI Data Archive(s).
 
->**Note:** Ensure you download and use the exact version of the PI Server (**PI Server 2018 SP3 Patch 3**) and PI Vision (**PI Vision 2020**) install kits described in this guide!
+>**Note:** Ensure you download and use the exact version of the PI Server (**AVEVA PI Server 2018 SP3 Patch 4**) and PI Vision (**AVEVA PI Vision 2022**) install kits described in this guide!
 
 ##### Download and Stage the PI Server Install Kit and Temporary License File
-1. From the **Products** page on the [OSIsoft Customer Portal](https://my.osisoft.com), click on the product row for **PI Server**.
-2. Click the **ALL VERSIONS** tab to display the **PI Server 2018 SP3 Patch 3** version of PI Server.
-3. On the row corresponding to the **PI Server 2018 SP3 Patch 3** version of the install kit, click **Download** to display the **License and Service Agreements** page.
+1. From the **Products** page on the [OSIsoft Customer Portal](https://my.osisoft.com), click on the product row for **Aveva PI Server**.
+2. Click the **ALL VERSIONS** tab to display the **(**AVEVA PI Server 2018 SP3 Patch 4** version of PI Server.
+3. On the row corresponding to the **(**AVEVA PI Server 2018 SP3 Patch 4** version of the install kit, click **Download** to display the **License and Service Agreements** page.
 4. Agree to the **OSIsoft, LLC. (“OSIsoft”) Software License and Services Agreement** and click **Download**.
 5. When prompted to run or save the executable setup file, click **Save** and click **OK**.
 6. Locate your temporary PI license file and rename the file to **pilicense.dat**. If you do not have a temporary PI license, please contact OSIsoft Tech Support to obtain a 14-day temporary license for the deployment. OSIsoft Tech Support can be reached at the [ Customer Portal](https://my.osisoft.com).
 7. Download the PI Server install kit and your renamed PI license file into the **LocalArtifacts** folder on your local machine.
 
 ##### Download and Stage the PI Vision Install Kit
-1. From the **Products** page on the OSIsoft [Customer Portal](https://my.osisoft.com), click on the product row for **PI Vision**.
-2. Select the **ALL VERSIONS** tab to display the **PI Vision 2020** version of PI Vision.
-3. On the row corresponding to the **PI Vision 2020** version of the install kit, click **Download** to display the **License and Service Agreements** page.
+1. From the **Products** page on the OSIsoft [Customer Portal](https://my.osisoft.com), click on the product row for **Aveva PI Vision**.
+2. Select the **ALL VERSIONS** tab to display the **AVEVA PI Vision 2022** version of PI Vision.
+3. On the row corresponding to the **AVEVA PI Vision 2022** version of the install kit, click **Download** to display the **License and Service Agreements** page.
 4. Agree to the **OSIsoft, LLC. (“OSIsoft”) Software License and Services Agreement** and click **Download**.
 5. When prompted to run or save the executable setup file, click **Save** and click **OK**.
 6. Upload your PI Vision installer into the **LocalArtifacts** folder on your local machine.
 
 ##### Download and Stage the PI System Deployment Tests File
-1. Go to the [OSIsoft Repository for PI System Deployment Tests](https://github.com/osisoft/sample-pi_core-pi_core_deployment_tests-powershell).
-1. Click **Clone or Download** and then **Download Zip** to download the contents of this GitHub repository onto your local machine as a zip file. The deployment samples will configure and run the deployment tests for your environment.
-3. Extract the **sample-pi_core-pi_core_deployment_tests-powershell** folder to your local machine.
-4. Locate the folder called "sample-pi_core-pi_core_deployment_tests-powershell", right click on it and select "Send to > Compressed (zipped) folder". The filename should be sample-pi_core-pi_core_deployment_tests-powershell.zip.
-5. Save this zip file onto your local machine in the **LocalArtifacts** folder. 
+1. Go to the [OSIsoft GitHub repository for PI System Deployment Tests](https://github.com/osisoft/sample-pi_core-pi_core_deployment_tests-powershell).
+2. Click **Clone or Download** to download the contents of this GitHub repository onto your local machine as a zip file. The PI system deployment tests will build and run the deployment tests for your environment.
+3. Validate that the zip file containts a folder named "**sample-pi_core-pi_core_deployment_tests-powershell-main**" inside of it. If not you will need to extract the zip file and rename the folder inside to "**sample-pi_core-pi_core_deployment_tests-powershell-main**". Then proceed to zip that folder up as ""**sample-pi_core-pi_core_deployment_tests-powershell-main.zip**"
+3. Move the "**sample-pi_core-pi_core_deployment_tests-powershell-main.zip**" file onto your local machine in the **LocalArtifacts** folder. 
 
 #### Verify You Have All of the Necessary Files
 Verify that you have the necessary files and folders on your local machine. It should be similar to the following directory:
@@ -108,11 +109,11 @@ Verify that you have the necessary files and folders on your local machine. It s
 Unzipped folder (AzureDeployment)
 |--> helpers 
 |--> LocalArtifacts 
-    |--> PI-Server_2018-SP3-Patch-3_.exe 
-    |--> PI-Vision_2020_.exe
+    |--> AVEVA-PI-Server_2018-SP3-Patch-4_.exe 
+    |--> AVEVA-PI-Vision_2022_.exe
     |--> pilicense.dat 
     |--> UpdateAFServersUser.sql 
-    |--> PI-System-Deployment-Tests.zip 
+    |--> sample-pi_core-pi_core_deployment_tests-powershell-main.zip 
 |--> LocalNugetPackages 
     |--> PSDSSupportPIDA.0.0.0.3.nupkg 
     |--> PSDSSupportPIVS.0.0.0.3.nupkg 
@@ -131,7 +132,7 @@ For more information on this, see [Change the license model for a SQL Server vir
 #### Install or Upgrade the AzureRM Cmdlets
 AzureRM Cmdlets are a set of cmdlets for PowerShell that use the Azure Resource Manager (ARM) model for managing your Azure resources: the template uses them to deploy the Azure resources essential for your PI System. 
 1. Launch PowerShell on your local machine as an Administrator.
-2. Enter the following command: `PS C:\WINDOWS\system32> Install-Module -Name AzureRM -AllowClobber`.
+2. Enter the following command: `PS C:\WINDOWS\system32> Install-Module -Name Az -AllowClobber`.
 This will install or (if you already have them installed) update your AzureRM Cmdlets.
 3. Agree to **import** and install the nuget provider if prompted.
 4. If prompted with **Are you sure you want to install the modules from 'PSGallery'**, agree to **Yes to All** by selecting `A`.
@@ -198,13 +199,13 @@ Once the PI Data Archive(s) are fully deployed, you can generate a full PI licen
 
 #### Generate a Full PI license:
 1. Log into the primary PI Data Archive server machine.     
-> **Note:** Create the Machine Signature File (MSF) on the server that is the primary member of the pair of PI Data Archive servers deployed. For more information on HA and collective members, see the *License a new PI Data Archive collective* section of the *PI Server Installation and Upgrade Guide*. You can find this guide on the OSIsoft Customer Portal.
+> **Note:** Create the Machine Signature File (MSF) on the server that is the primary member of the pair of PI Data Archive servers deployed. For more information on HA and collective members, see the *License a new PI Data Archive collective* section of the *PI Server Installation and Upgrade Guide*. You can find this guide on the OSIsoft [Customer Portal](https:\\my.osisoft.com).
 2. Create an MSF using the pidiag utility on the PI Data Archive server machine. This utility is installed as part of your PI System deployment on the machine that hosts the PI Data Archive.
 3. Copy the ds-admin password contained in the secret value from the Azure key vault.
 4. Log into RDS machine using the copied password from the key vault.
 5. Remote login to the PI Data Archive machine(s) from the RDS node using the same copied credentials.
 6. Find and copy the MSF on the PI Data Archive machine(s) onto the RDS machine.
-7. Generate the license file on the OSIsoft Customer Portal. For instructions on do this, see the *PI Server Installation and Upgrade Guide*, in the section [Generate a license file for a standalone deployment](https://livelibrary.osisoft.com/LiveLibrary/content/en/server-v12/GUID-0AE01ADF-771E-4BDA-B266-3C928BF79EBC). 
+7. Generate the license file on the OSIsoft [Customer Portal](my.osisoft.com). For instructions on do this, see the *PI Server Installation and Upgrade Guide*, in the section [Generate a license file for a standalone deployment](https://livelibrary.osisoft.com/LiveLibrary/content/en/server-v12/GUID-0AE01ADF-771E-4BDA-B266-3C928BF79EBC). 
 
 #### Replace the temporary license with the full PI license
 1. Browse to the newly generated PI license in File Explorer and copy the license file.
